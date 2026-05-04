@@ -8,6 +8,6 @@ export class OrderController {
 
   @Post()
   create(@Body() createOrderDto: CreateOrderDto) {
-    this.orderService.save()
+    return this.orderService.save(createOrderDto);
   }
 }
